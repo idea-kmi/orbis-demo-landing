@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./styles.css"  />
+    </head>
+    <body>
+        <h1>Welcome to ORBIS Home Page</h1>
+        <ul>
+            <li>
+                <a href="./pilot1.html">Pilot 1</a>
+                <p>Lorem Ipsum</p>
+            </li>
+            <li>
+                <a href="./pilot2.html">Pilot 2</a>
+                <p>Lorem Ipsum</p>
+            </li>
+            <li>
+                <a href="./pilot3.html">Pilot 3</a>
+                <p>Lorem Ipsum</p>
+            </li>
+            <li>
+                <a href="./pilot4.html">Pilot 4</a>
+                <p>Lorem Ipsum</p>
+            </li>
+            <li>
+                <a href="./pilot5.html">Pilot 5</a>
+                <p>Lorem Ipsum</p>
+            </li>
+        </ul>
+    </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set keyword to check where the user is coming from
+            const keyWord = "docs.google.com"; 
+            
+            // Where the user is coming from
+            const referrer = document.referrer;
+
+            // Check if last page visited on ORBIS platform was a pilot page
+            const pilot = localStorage.getItem("pilot");
+
+            console.log("REFERRER",referrer);
+            console.log("PILOT",pilot);
+
+            if (referrer.includes(keyWord)) {
+                switch (pilot) {
+                    case '1':
+                        console.log('Redirect to next step of PILOT 1');
+                        break;
+                    case '2':
+                        console.log('Redirect to next step of PILOT 2');
+                        break;
+                    case '3':
+                        console.log('Redirect to next step of PILOT 3');
+                        break;
+                    case '4':
+                        console.log('Redirect to next step of PILOT 4');
+                        break;
+                    case '5':
+                        console.log('Redirect to next step of PILOT 5');
+                        break;
+                    default:
+                        console.log(`Stay in the home page`);
+                        localStorage.setItem("pilot", "none");
+                }
+            } else {
+                localStorage.setItem("pilot", "none");
+            }
+
+            // Contenitore per il contenuto condizionale
+            /* const contenitore = document.getElementById("contenuto-condizionale");
+
+            // Controlla se il referrer contiene la parola chiave desiderata
+            if (referrer.includes(parolaChiave)) {
+                contenitore.innerHTML = '<a href="https://t.me/OrbisRobDeMat_bot">Inizia</a>';
+            } else {
+                contenitore.innerHTML = '';
+            } */
+        });
+    </script>
+</html>
