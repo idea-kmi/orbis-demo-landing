@@ -8,12 +8,16 @@
         <p>
             This is the second pilot page.
         </p>
-        <button>Register</button>
+        <button onclick="visitPage();">Register</button>
     </body>
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            localStorage.setItem("pilot", "2");
+            localStorage.setItem("pilot", "1");
         });
+
+        function  visitPage() {
+            window.location='https://docs.google.com/forms/d/e/1FAIpQLSfaTgcnwOCIVqmcEAEDmluauIqOwmjT1lHdjaYcEuyl6PNBoA/viewform?usp=sharing';
+        }
     </script>
 </html>
