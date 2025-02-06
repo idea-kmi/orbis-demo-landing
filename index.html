@@ -31,7 +31,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Set keyword to check where the user is coming from
-            const keyWord = "docs.google.com"; 
+            const keyWord = "google.com"; 
             
             // Where the user is coming from
             const referrer = document.referrer;
@@ -46,18 +46,28 @@
                 switch (pilot) {
                     case '1':
                         console.log('Redirect to next step of PILOT 1');
+                        // REDIRECT WHEREVER YOU WANT
+                        window.location.href = 'pilot1.html';
                         break;
                     case '2':
                         console.log('Redirect to next step of PILOT 2');
+                        // REDIRECT WHEREVER YOU WANT
+                        window.location.href = 'pilot2.html';
                         break;
                     case '3':
                         console.log('Redirect to next step of PILOT 3');
+                        // REDIRECT WHEREVER YOU WANT
+                        window.location.href = 'pilot3.html';
                         break;
                     case '4':
                         console.log('Redirect to next step of PILOT 4');
+                        // REDIRECT WHEREVER YOU WANT
+                        window.location.href = 'pilot4.html';
                         break;
                     case '5':
                         console.log('Redirect to next step of PILOT 5');
+                        // REDIRECT WHEREVER YOU WANT
+                        window.location.href = 'pilot5.html';
                         break;
                     default:
                         console.log(`Stay in the home page`);
